@@ -173,9 +173,8 @@ print(f'Actual class for sample input: {label_encoder.inverse_transform([y_test[
 ```
 
 ### Dataset Information
-<img width="1293" height="326" alt="image" src="https://github.com/user-attachments/assets/02ece973-75d4-4bc9-948c-b6ef6cf96261" />
+<img width="1145" height="386" alt="image" src="https://github.com/user-attachments/assets/7aeb4431-d048-4dd6-98e6-92bc3690ee32" />
 
-### OUTPUT
 
 ## Confusion Matrix
 
