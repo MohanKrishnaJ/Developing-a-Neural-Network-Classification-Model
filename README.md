@@ -33,9 +33,9 @@ Train the model using CrossEntropyLoss and Adam optimizer by performing forward 
 Evaluate the trained model on test data using accuracy, confusion matrix, and classification report, and perform prediction on a sample input.
 ## PROGRAM
 
-### Name: PRAGATHEESHRAAJ D
+### Name: MOHAN KRISHNA J
 
-### Register Number: 212224230199
+### Register Number: 212223220060
 
 ```python
 import torch
