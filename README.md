@@ -1,5 +1,9 @@
 # Developing a Neural Network Classification Model
 
+### Name: MOHAN KRISHNA J
+
+### Register Number: 212223220060
+
 ## AIM
 To develop a neural network classification model for the given dataset.
 
@@ -32,11 +36,6 @@ Train the model using CrossEntropyLoss and Adam optimizer by performing forward 
 ### Step 6: Evaluate and Predict
 Evaluate the trained model on test data using accuracy, confusion matrix, and classification report, and perform prediction on a sample input.
 ## PROGRAM
-
-### Name: MOHAN KRISHNA J
-
-### Register Number: 212223220060
-
 ```python
 import torch
 import torch.nn as nn
@@ -50,8 +49,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 from torch.utils.data import TensorDataset, DataLoader
 
 # Load dataset
-data = pd.read_csv('/content/customers.csv')
-data.head()
+data = pd.read_csv('customers.csv')
+data.head(5)
 
 data.columns
 
@@ -97,30 +96,34 @@ test_loader = DataLoader(test_dataset, batch_size=16)
 # Define Neural Network(Model1)
 class PeopleClassifier(nn.Module):
     def __init__(self, input_size):
-        super(PeopleClassifier, self).__init__()
+        super().__init__()
         self.fc1 = nn.Linear(input_size, 32)
-        self.fc2 = nn.Linear(32,16)
-        self.fc3 = nn.Linear(16,8)
-        self.fc4 = nn.Linear(8,4)
-
+        self.fc2 = nn.Linear(32, 16)
+        self.fc3 = nn.Linear(16, 8)
+        self.fc4 = nn.Linear(8, 4)
 
     def forward(self, x):
-      x = F.relu(self.fc1(x))
-      x = F.relu(self.fc2(x))
-      x = F.relu(self.fc3(x))
-      x = self.fc4(x)
-      return x
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = F.relu(self.fc3(x))
+        x = self.fc4(x)
+        return x
 
 # Training Loop
+# Training Loop
 def train_model(model, train_loader, criterion, optimizer, epochs):
-    model.train()
-    for epoch in range(epochs):
-        for inputs, labels in train_loader:
-            optimizer.zero_grad()
-            outputs = model(inputs)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
+  model.train()
+  for epoch in range(epochs):
+    for inputs,labels in train_loader:
+      optimizer.zero_grad()
+      outputs=model(inputs)
+      loss=criterion(outputs,labels)
+      loss.backward()
+      optimizer.step()
+
+
+
+
 
     if (epoch + 1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{epochs}], Loss: {loss.item():.4f}')
@@ -144,8 +147,8 @@ with torch.no_grad():
 accuracy = accuracy_score(actuals, predictions)
 conf_matrix = confusion_matrix(actuals, predictions)
 class_report = classification_report(actuals, predictions, target_names=[str(i) for i in label_encoder.classes_])
-print("Name: Pragatheeshraaj D")
-print("Register No: 212224230199")
+print("Name:  MOHAN KRISHNA J")
+print("Register No:   212223220060")
 print(f'Test Accuracy: {accuracy:.2f}%')
 print("Confusion Matrix:\n", conf_matrix)
 print("Classification Report:\n", class_report)
@@ -165,28 +168,34 @@ with torch.no_grad():
     # Select the prediction for the sample (first element)
     predicted_class_index = torch.argmax(output[0]).item()
     predicted_class_label = label_encoder.inverse_transform([predicted_class_index])[0]
-print("Name: Pragatheeshraaj D")
-print("Register No: 212224230199")
+print("Name:   MOHAN KRISHNA J")
+print("Register No:  212223220060")
 print(f'Predicted class for sample input: {predicted_class_label}')
 print(f'Actual class for sample input: {label_encoder.inverse_transform([y_test[12].item()])[0]}')
 
 ```
 
 ### Dataset Information
-<img width="1145" height="386" alt="image" src="https://github.com/user-attachments/assets/7aeb4431-d048-4dd6-98e6-92bc3690ee32" />
+<img width="1020" height="577" alt="image" src="https://github.com/user-attachments/assets/ea4fe387-1ae5-49f0-9bc3-e53410d4529e" />
 
+
+### OUTPUT
 
 ## Confusion Matrix
 
-<img width="1523" height="630" alt="image" src="https://github.com/user-attachments/assets/b851847e-3ff4-487a-851e-ccdd80f7cd4b" />
+<img width="764" height="561" alt="image" src="https://github.com/user-attachments/assets/2335f969-fb0d-4427-8640-745ef2a0b1be" />
+
 
 
 ## Classification Report
-<img width="1215" height="281" alt="image" src="https://github.com/user-attachments/assets/cd3f772f-5bb3-450a-bb7e-4a29b7ad632b" />
+<img width="645" height="438" alt="image" src="https://github.com/user-attachments/assets/17a8908e-ce73-4930-8377-6db256d0eab9" />
+
 
 
 ### New Sample Data Prediction
-<img width="1218" height="106" alt="image" src="https://github.com/user-attachments/assets/0938cf08-5f8b-44e3-9a13-3ee813c0d4f3" />
+<img width="394" height="101" alt="image" src="https://github.com/user-attachments/assets/251f26a4-bb9c-4127-a9e9-efec735451e2" />
+
+
 
 ## RESULT
 This program has been executed successfully.
