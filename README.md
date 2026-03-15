@@ -193,7 +193,7 @@ print(f'Actual class for sample input: {label_encoder.inverse_transform([y_test[
 
 
 ### New Sample Data Prediction
-[<img width="645" height="438" alt="image" src="https://github.com/user-attachments/assets/17a8908e-ce73-4930-8377-6db256d0eab9" />](https://kommodo.ai/i/4Mi4i3QgpTZelMIYDzYq)
+![image alt](https://github.com/MohanKrishnaJ/Developing-a-Neural-Network-Classification-Model/blob/44db042580897bf59d0116f7532fd2c74bc18471/Screenshot%202026-03-16%20000314.png)
 
 
 
