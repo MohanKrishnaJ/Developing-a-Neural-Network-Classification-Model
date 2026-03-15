@@ -176,8 +176,7 @@ print(f'Actual class for sample input: {label_encoder.inverse_transform([y_test[
 ```
 
 ### Dataset Information
-<img width="1020" height="577" alt="image" src="https://github.com/user-attachments/assets/ea4fe387-1ae5-49f0-9bc3-e53410d4529e" />
-
+![image alt](https://github.com/MohanKrishnaJ/Developing-a-Neural-Network-Classification-Model/blob/eae4f30e32871eb321b6de9a4b63cd107aedd156/Screenshot%202026-03-16%20000946.png)
 
 ### OUTPUT
 
