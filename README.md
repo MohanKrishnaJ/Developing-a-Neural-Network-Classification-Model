@@ -188,8 +188,8 @@ print(f'Actual class for sample input: {label_encoder.inverse_transform([y_test[
 
 
 ## Classification Report
-<img width="645" height="438" alt="image" src="https://github.com/user-attachments/assets/17a8908e-ce73-4930-8377-6db256d0eab9" />
-
+[<img width="645" height="438" alt="image" src="https://github.com/user-attachments/assets/17a8908e-ce73-4930-8377-6db256d0eab9" />
+](https://kommodo.ai/i/4Mi4i3QgpTZelMIYDzYq)
 
 
 ### New Sample Data Prediction
